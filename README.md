@@ -1,53 +1,501 @@
-# Vertex AI Studio Frontend App with Node.js Backend
+# SHIVA Intelligence OS
 
-This repository contains a frontend and a Node.js backend, designed to run together.
-The backend acts as a proxy, handling Google Cloud API calls.
+## AI-Powered Career Intelligence Operating System
 
-This project is intended for demonstration and prototyping purposes only.
-It is not intended for use in a production environment.
+SHIVA Intelligence OS is an advanced AI-powered Career Intelligence Platform designed to transform job application data, resumes, recruiter interactions, and labor market trends into actionable career growth strategies.
+
+Unlike traditional job trackers, SHIVA Intelligence OS functions as a personal AI Career Operating System, combining Resume Intelligence, ATS Optimization, Opportunity Scoring, Recruiter Intelligence, Career Forecasting, Skill Gap Analysis, and Strategic Decision Engines into a single unified platform.
+
+---
+
+# Vision
+
+Modern job seekers are overwhelmed by:
+
+* Hundreds of applications
+* Low recruiter response rates
+* ATS screening systems
+* Rapidly changing skill requirements
+* Lack of actionable career insights
+
+SHIVA Intelligence OS solves this by providing:
+
+* AI-powered resume analysis
+* Dynamic ATS intelligence
+* Opportunity ranking and prioritization
+* Recruiter intelligence and outreach planning
+* Skill ROI analysis
+* Career forecasting
+* Market demand analytics
+* Strategic career decision support
+
+The goal is simple:
+
+> Help candidates spend less time applying and more time securing interviews and offers.
+
+---
+
+# Core Features
+
+## Resume DNA Engine
+
+Upload your resume once.
+
+The platform automatically extracts:
+
+* Skills
+* Technologies
+* Programming Languages
+* Frameworks
+* Certifications
+* Projects
+* Education
+* Experience
+
+The extracted information becomes the foundation of all intelligence calculations throughout the platform.
+
+### Supported Formats
+
+* PDF
+* DOCX
+
+---
+
+## ATS Intelligence Engine
+
+Unlike traditional ATS tools that rely on simple keyword matching, SHIVA Intelligence OS performs semantic analysis between:
+
+```text
+Resume
+vs
+Job Description
+```
+
+The system automatically calculates:
+
+* ATS Match Score
+* Hard Requirement Coverage
+* Preferred Requirement Coverage
+* Missing Skills
+* Skill Impact Analysis
+* ATS Improvement Opportunities
+
+Example:
+
+```text
+Current ATS Score: 68%
+
+Add Azure:
++8 ATS
+
+Add Docker:
++6 ATS
+
+Potential ATS:
+82%
+```
+
+---
+
+## Opportunity Intelligence
+
+Every application is treated as an investment opportunity.
+
+The platform automatically generates:
+
+* Opportunity Score
+* Interview Probability
+* Offer Probability
+* Competition Analysis
+* Career Alignment
+* Growth Potential
+* Strategic Recommendations
+
+Categories include:
+
+* Elite Opportunity
+* High Value
+* Good Fit
+* Medium Yield
+* Low Yield
+* Avoid
+
+---
+
+## Market Intelligence
+
+Analyze labor market demand using uploaded application data.
+
+Identify:
+
+* Most Requested Skills
+* Fastest Growing Technologies
+* Highest Value Certifications
+* Cloud Technology Demand
+* AI & Machine Learning Trends
+* Salary Trends
+
+Visualizations include:
+
+* Demand Heatmaps
+* Skill Rankings
+* Market Trend Analysis
+* Opportunity Distribution
+
+---
+
+## Skill ROI Engine
+
+Not all skills provide equal career value.
+
+The platform ranks skills based on:
+
+* Market Demand
+* Salary Impact
+* Interview Impact
+* ATS Improvement Potential
+* Learning Complexity
+
+Example:
+
+| Skill      | ATS Gain | Interview Gain | Salary Impact | ROI |
+| ---------- | -------- | -------------- | ------------- | --- |
+| Azure      | +8%      | +14%           | High          | 98  |
+| Docker     | +6%      | +11%           | High          | 94  |
+| Kubernetes | +4%      | +7%            | Medium        | 82  |
+
+---
+
+## Recruiter Intelligence
+
+Automatically analyzes recruiter and hiring pipeline data.
+
+Features include:
+
+* Recruiter Prioritization
+* Response Probability
+* Follow-Up Recommendations
+* Relationship Tracking
+* Networking Intelligence
+* Recruiter Outreach Planning
+
+---
+
+## Career Copilot
+
+An AI-powered career strategist that continuously analyzes:
+
+* Resume Performance
+* Application Results
+* ATS Readiness
+* Recruiter Activity
+* Market Alignment
+
+Provides:
+
+* Daily Missions
+* Executive Briefings
+* Career Health Scores
+* Strategic Recommendations
+* Personalized Action Plans
+
+---
+
+## Career Simulator
+
+Simulate the impact of career decisions before investing time.
+
+Examples:
+
+### What if I learn Azure?
+
+```text
+ATS Score:
+50 → 61
+
+Interview Probability:
+5% → 11%
+
+Career Health:
+35 → 48
+```
+
+### What if I improve recruiter outreach?
+
+```text
+Interview Probability:
+8% → 17%
+
+Expected Interviews:
+3 → 8
+```
+
+---
+
+## Executive Decision Engine
+
+The Strategic Decision Engine answers:
+
+```text
+What should I do today to maximize interview probability?
+```
+
+Provides:
+
+* Daily Priorities
+* Skill Recommendations
+* Follow-Up Actions
+* Recruiter Engagement Tasks
+* Opportunity Recovery Actions
+
+---
+
+# Application Data Source
+
+The platform imports CSV files generated by LinkedIn Auto Apply systems.
+
+Supported fields include:
+
+```json
+{
+  "Job ID":"",
+  "Title":"",
+  "Company":"",
+  "Work Location":"",
+  "Work Style":"",
+  "About Job":"",
+  "Experience required":"",
+  "Skills required":"",
+  "HR Name":"",
+  "HR Link":"",
+  "Resume":"",
+  "Re-posted":"",
+  "Date Posted":"",
+  "Date Applied":"",
+  "Job Link":"",
+  "External Job link":"",
+  "Questions Found":"",
+  "Connect Request":"",
+  "Education Required":"",
+  "Clearance Required":"",
+  "Extracted Salary":"",
+  "Job Level":"",
+  "Missing Skills":"",
+  "Match Score (%)":"",
+  "Visa/Sponsorship":"",
+  "Employment Type":"",
+  "Applicant Count":"",
+  "Ghost Job Warning":""
+}
+```
+
+Important:
+
+```text
+About Job = Full Job Description
+```
+
+The ATS Intelligence Engine uses:
+
+```text
+Resume
++
+About Job
+```
+
+to generate all intelligence calculations.
+
+---
+
+# Technology Stack
+
+## Frontend
+
+* React
+* TypeScript
+* Vite
+* TailwindCSS
+* shadcn/ui
+* Recharts
+
+## Backend
+
+* Node.js
+* Express.js
+
+## AI & Intelligence
+
+* Google Gemini
+* Vertex AI
+* Semantic Skill Matching
+* ATS Intelligence Engine
+* Opportunity Scoring Engine
+
+## Data Layer
+
+* PostgreSQL
+* CSV Import Pipeline
+* Analytics Engine
+* Historical Tracking
+
+---
+
+# Local Development
 
 ## Prerequisites
 
-To run this application locally, you need:
+### Node.js
 
-*   **[Google Cloud SDK / gcloud CLI](https://cloud.google.com/sdk/docs/install)**: Follow the instructions to install the SDK.
-
-*   **gcloud Initialization**:
-    *   Initialize the gcloud CLI:
-        ```bash
-        gcloud init
-        ```
-    *   Authenticate for Application Default Credentials (needed to call Google Cloud APIs):
-        ```bash
-        gcloud auth application-default login
-        ```
-
-*   **Node.js and npm**: Ensure you have Node.js and its package manager, `npm`, installed on your machine.
-
-## Project Structure
-
-The project is organized into two main directories:
-
-*   `frontend/`: Contains the Frontend application code.
-*   `backend/`: Contains the Node.js/Express server code to proxy Google Cloud API calls.
-
-## Backend Environment Variables
-
-The `backend/.env.local` file is automatically generated when you download this application.
-It contains essential Google Cloud environment variables pre-configured based on your project settings at the time of download.
-
-The variables set in `backend/.env.local` are:
-*   `API_BACKEND_PORT`: The port the backend API server listens on (e.g., `5000`).
-*   `API_PAYLOAD_MAX_SIZE`: The maximum size of the request payload accepted by the backend server (e.g., `5mb`).
-*   `GOOGLE_CLOUD_LOCATION`: The Google Cloud region associated with your project.
-*   `GOOGLE_CLOUD_PROJECT`: Your Google Cloud Project ID.
-
-**Note:** These variables are automatically populated during the download process.
-You can modify the values in `backend/.env.local` if you need to change them.
-
-## Installation and Running the App
-
-To install dependencies and run your Google Cloud Vertex AI Studio App locally, execute the following command:
+Install:
 
 ```bash
-npm install && npm run dev
+https://nodejs.org
+```
+
+Verify:
+
+```bash
+node -v
+npm -v
+```
+
+---
+
+### Google Cloud SDK
+
+Install:
+
+```bash
+https://cloud.google.com/sdk/docs/install
+```
+
+Initialize:
+
+```bash
+gcloud init
+```
+
+Authenticate:
+
+```bash
+gcloud auth application-default login
+```
+
+---
+
+# Installation
+
+Clone repository:
+
+```bash
+git clone https://github.com/your-username/shiva-intelligence-os.git
+cd shiva-intelligence-os
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+---
+
+# Environment Configuration
+
+Create:
+
+```bash
+backend/.env.local
+```
+
+Example:
+
+```env
+API_BACKEND_PORT=5000
+API_PAYLOAD_MAX_SIZE=10mb
+
+GOOGLE_CLOUD_LOCATION=europe-west2
+GOOGLE_CLOUD_PROJECT=your-project-id
+
+GEMINI_MODEL=gemini-2.5-pro
+```
+
+---
+
+# Running Development Environment
+
+Start both frontend and backend:
+
+```bash
+npm run dev
+```
+
+Frontend:
+
+```text
+http://localhost:5173
+```
+
+Backend:
+
+```text
+http://localhost:5000
+```
+
+---
+
+# Product Roadmap
+
+## Phase 1
+
+Resume DNA Engine
+
+## Phase 2
+
+Market Intelligence
+
+## Phase 3
+
+Opportunity Intelligence
+
+## Phase 4
+
+Recruiter Intelligence
+
+## Phase 5
+
+Career Copilot
+
+## Phase 5.5
+
+Strategic Decision Engine
+
+## Phase 6
+
+Autonomous Career Agent
+
+Future goals:
+
+* Automatic Job Discovery
+* Autonomous Outreach
+* AI Interview Coach
+* Salary Negotiation Assistant
+* Career Autopilot
+
+---
+
+# Disclaimer
+
+SHIVA Intelligence OS provides career intelligence, forecasting, and strategic recommendations based on available application, resume, recruiter, and market data.
+
+Predictions such as ATS scores, interview probabilities, offer probabilities, and market forecasts are analytical estimates and should not be interpreted as guarantees of employment outcomes.
+
+---
+
+# License
+
+MIT License
+
+Copyright © 2026 SHIVA Intelligence OS
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files to use, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, subject to the terms of the MIT License.
