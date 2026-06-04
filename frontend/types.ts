@@ -146,6 +146,8 @@ export interface SkillROI {
   learningTime: string;
   roiScore: number;
   priority: 'Critical' | 'High Impact' | 'Quick Win' | 'Long-Term';
+  confidence: number;
+  reason: string;
 }
 
 export interface DailyMission {
@@ -156,15 +158,16 @@ export interface DailyMission {
 }
 
 export interface CareerForecast {
-  interviews30: number;
-  interviews60: number;
-  interviews90: number;
-  offers30: number;
-  offers60: number;
-  offers90: number;
+  interviews30: string;
+  interviews60: string;
+  interviews90: string;
+  offers30: string;
+  offers60: string;
+  offers90: string;
   trajectory3m: string;
   trajectory6m: string;
   trajectory12m: string;
+  confidence: number;
 }
 
 export interface CareerRisk {
@@ -173,9 +176,28 @@ export interface CareerRisk {
   description: string;
 }
 
+export interface RootCause {
+  id: string;
+  title: string;
+  impact: number;
+  reason: string;
+  fix: string;
+  expectedImprovement: string;
+}
+
+export interface CareerHealthBreakdown {
+  resumeQuality: number;
+  atsReadiness: number;
+  marketAlignment: number;
+  recruiterNetwork: number;
+  interviewActivity: number;
+  skillCoverage: number;
+}
+
 export interface AIInsights {
   executiveBriefing: string;
   careerHealthScore: number;
+  careerHealthBreakdown?: CareerHealthBreakdown;
   interviewProbability: number;
   offerProbability: number;
   highestOpportunityJob: string;
@@ -215,6 +237,13 @@ export interface AIInsights {
     skill: string;
     ats: string;
     recruiter: string;
+  };
+  
+  // Phase 5.5 Strategic Decision Engine
+  rootCauses?: RootCause[];
+  recoverableOpportunities?: {
+    count: number;
+    potentialInterviews: number;
   };
 }
 
